@@ -1,0 +1,27 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+-buildpath: \
+	osgi.annotation;version=7.0.0,\
+	osgi.cmpn;version=7.0.0,\
+	org.apache.felix.framework;version=6.0.2,\
+	slf4j.api
+	
+-testpath: \
+	osgi.enroute.junit.wrapper,\
+	osgi.enroute.hamcrest.wrapper,\
+	biz.aQute.launchpad;version=4.3.0,\
+
+-runblacklist: \
+	osgi.identity;filter:='(osgi.identity=osgi.enterprise)',\
+	bnd.identity;id='biz.aQute.repository',\
+	bnd.identity;id='biz.aQute.bndlib',\
+	bnd.identity;id='org.apache.logging.log4j.slf4j-impl'
+
+	
+javac.source: 1.8
+javac.target: 1.8
+
+
+
+Private-Package: com.example.launchpad.api
+-privatepackage: com.example.launchpad
